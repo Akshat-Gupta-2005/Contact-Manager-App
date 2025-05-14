@@ -66,7 +66,7 @@ const loginUser = asyncHandler(async (req, res) => {
             }
 
         }, process.env.ACCESS_TOKEN_SECRET, {
-            expiresIn: '1m',
+            expiresIn: '5m',
         });
         res.status(200).json({
             accessToken,
@@ -83,7 +83,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
 const currentUser = asyncHandler(async (req, res) => {
     // Get current user logic here
-    res.status(200).json({ message: 'Current user data' });
+    res.status(200).json(req.user);
 })
 
 
