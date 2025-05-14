@@ -2,6 +2,7 @@ const { constants } = require("../utils/constants.js");
 
 const errorHandler = (err, req, res, next) => {
     const statusCode = err.statusCode || 500;
+    // const statusCode = err.statusCode || 500;
 
     res.status(statusCode);
 
@@ -10,7 +11,6 @@ const errorHandler = (err, req, res, next) => {
             res.json({
                 title: "Bad Request",
                 message: err.message,
-                // stack: process.env.NODE_ENV === 'production' ? null : err.stack,
                 stackTrace: err.stack,
             });
             break;
@@ -18,7 +18,6 @@ const errorHandler = (err, req, res, next) => {
             res.json({
                 title: "Unauthorized",
                 message: err.message,
-                // stack: process.env.NODE_ENV === 'production' ? null : err.stack,
                 stackTrace: err.stack,
             });
             break;
@@ -26,7 +25,6 @@ const errorHandler = (err, req, res, next) => {
             res.json({
                 title: "Forbidden",
                 message: err.message,
-                // stack: process.env.NODE_ENV === 'production' ? null : err.stack,
                 stackTrace: err.stack,
             });
             break;
@@ -34,7 +32,6 @@ const errorHandler = (err, req, res, next) => {
             res.json({
                 title: "Not Found",
                 message: err.message,
-                // stack: process.env.NODE_ENV === 'production' ? null : err.stack,
                 stackTrace: err.stack,
             });
             break;
@@ -42,7 +39,6 @@ const errorHandler = (err, req, res, next) => {
             res.json({
                 title: "Server Error",
                 message: err.message,
-                // stack: process.env.NODE_ENV === 'production' ? null : err.stack,
                 stackTrace: err.stack
 
             });

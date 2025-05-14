@@ -22,5 +22,14 @@ const contactSchema = mongoose.Schema({
     timestamps: true,
 });
 
+/*
+1. Defines the Model Name
+'Contact' becomes the model name you use throughout your app to interact with the collection.
+Contact (the variable) will give you access to Mongoose's methods like .find(), .create(), .updateOne(), etc., for that schema.
+
+2. Determines the Collection Name in MongoDB
+Mongoose automatically pluralizes and lowercases the model name to determine the MongoDB collection name.
+*/
+
 const Contact = mongoose.model('Contact', contactSchema);
 module.exports = Contact;
