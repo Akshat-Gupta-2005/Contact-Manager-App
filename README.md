@@ -1,2 +1,11 @@
 # Contact-Manager-App
-This is a Contact Manager App using Node and other libraries
+This is a backend server for Contact Manager App 
+
+### Tech used
+- Node
+- Express
+ - Expres-Async-Handler
+- Mongooose (MongoDB)
+- JsonWebToken
+- Bcrypt
+- Dotenv
